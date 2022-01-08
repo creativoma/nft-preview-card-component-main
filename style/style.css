@@ -1,0 +1,180 @@
+/* style.css" media="(min-width: 375px) */
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --attribution: hsl(228, 45%, 44%);
+  --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: 62.5%;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+body {
+  background: var(--very-dark-blue-main-BG);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+section.card {
+  background: var(--very-dark-blue-card-BG);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 320px;
+  min-height: 480px;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+section.card div.container-img {
+  position: relative;
+  width: 99%;
+  background: var(--cyan);
+  border-radius: 11px;
+  margin-bottom: 20px;
+}
+
+section.card div.container-img img.card-img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 350ms ease;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+section.card div.container-img:hover img.card-img {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+section.card div.container-img div.overlay-img {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+section.card div.container-img:hover div.overlay-img {
+  opacity: 1;
+  cursor: pointer;
+}
+
+section.card h3 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  transition: all 350ms ease;
+  color: var(--white);
+}
+
+section.card h3:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+section.card p.card-description {
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 2rem;
+  color: var(--soft-blue);
+  margin-bottom: 15px;
+}
+
+section.card div.card-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--very-dark-blue-line);
+}
+
+section.card div.card-data p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--soft-blue);
+  display: flex;
+  gap: 5px;
+}
+
+section.card div.card-data p:nth-child(1) {
+  font-weight: 500;
+  color: var(--cyan);
+}
+
+section.card div.card-creator {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+section.card div.card-creator img {
+  width: 32px;
+  outline: 1px solid var(--white);
+  border-radius: 50px;
+}
+
+section.card div.card-creator p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--soft-blue);
+}
+
+section.card div.card-creator p a {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--white);
+  text-decoration: none;
+  transition: all 350ms ease;
+}
+
+section.card div.card-creator p a:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+div.attribution {
+  text-align: center;
+  color: var(--soft-blue);
+  font-size: 1.2rem;
+}
+
+div.attribution a {
+  color: var(--attribution);
+  transition: all 350ms ease;
+  text-decoration: none;
+  color: var(--white);
+}
+
+div.attribution a:hover {
+  color: var(--cyan);
+}
