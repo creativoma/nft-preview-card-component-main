@@ -139,7 +139,7 @@ section.card div.card-creator {
 
 section.card div.card-creator img {
   width: 32px;
-  outline: 1px solid var(--white);
+  border: 1px solid var(--white);
   border-radius: 50px;
 }
 
